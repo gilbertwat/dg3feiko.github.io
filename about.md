@@ -1,16 +1,20 @@
 ---
 layout: page
-title: About Me
+title: Feiko Lai
 ---
 
 ![Profile Image](/public/30883b7.jpg "Profile Image")
 
+## Location
 
+* Hong Kong
+* China
 
 ## Working Experience
 
-* **2014 - now** Senior Software Enginner @ [Aftership](aftership.com)
-* **2011 - 2014** Senior Software Enginner @ [Outblaze](www.outblaze.com)
+* **2014 - Now** Senior Software Enginner [@Aftership](aftership.com)
+* **2014** Senior Software Enginner [@M800](www.m800.com)
+* **2011 - 2014** Senior Software Enginner [@Outblaze](www.outblaze.com)
 
 
 Learn more and contribute on [GitHub](https://github.com/poole).
