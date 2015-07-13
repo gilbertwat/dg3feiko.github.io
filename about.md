@@ -18,33 +18,23 @@ title: About Me
 
 ```js
 {
-    "mobile":{
-        "ios":[ "ObjC", "XCode", "AppCode"]
-    }
-    
+  "mobile": {
+    "iOS": ["ObjC", "XCode", "AppCode", "Cocoapods"],
+    "Android": ["Android Studio", "Google Play"],
+    "GameDev": ["Unity", "Cocoa2d"]
+  },
+  "backend": {
+    "JVM": ["Java", "Vert.x", "Kotlin", "Intellij", "Gradle"],
+    ".net": ["C#", "Mono", "Visual Studio", "Mono Studio", "NuGet"]
+  },
+  "scripting": {
+    "lua": ["lua-jit", "openresty"],
+    "python": [],
+    "ruby": []
+  }
 }
 ```
 
-```yaml
-
-mobile: 
-    - iOS - ObjC - Xcode - AppCode
-    - Android - Java - Android Studio - Gradle - Google Play
-    
-job: Developer
-skill: Elite
-employed: True
-foods:
-    - Apple
-    - Orange
-    - Strawberry
-    - Mango
-languages:
-    ruby: Elite
-    python: Elite
-    dotnet: Lame
-
-```
 
 
 ## Working Experience
