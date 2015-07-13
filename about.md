@@ -3,6 +3,10 @@ layout: page
 title: About Me
 ---
 
+![Profile Image]({{ site.baseurl }}/public/30883b7.jpg "Profile Image")
+
+
+
 ## Working Experience
 
 * **2014 - now** Senior Software Enginner @ [Aftership](aftership.com)
