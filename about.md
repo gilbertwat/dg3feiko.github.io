@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Feiko Lai
+title: About Me
 ---
 
 ![Profile Image](/public/30883b7.jpg "Profile Image")
