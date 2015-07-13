@@ -21,7 +21,7 @@ paginate:         5
 
 # Custom vars
 version:          2.1.0
-last_updated_at   Jul 12, 2015
+last_updated_at:  Jul 12, 2015
 
 github:
   repo:           https://github.com/dg3feiko
