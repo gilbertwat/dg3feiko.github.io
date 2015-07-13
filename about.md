@@ -17,19 +17,7 @@ title: About Me
 ## Skills and Stacks
 ```yaml
 ---
-  mobile: 
-    iOS: 
-      - "ObjC"
-      - "XCode"
-      - "AppCode"
-      - "Cocoapods"
-    Android: 
-      - "Android Studio"
-      - "Google Play"
-    GameDev: 
-      - "Unity"
-      - "Cocoa2d"
-  backend: 
+  Backend Server and Application: 
     JVM: 
       - "Java"
       - "Vert.x"
@@ -42,13 +30,43 @@ title: About Me
       - "Visual Studio"
       - "Mono Studio"
       - "NuGet"
-  scripting: 
+    node.js:
+      - "javascript"
+      - "ES6"
+      - "express.js"
+      - "mocha"
+  Mobile: 
+    iOS: 
+      - "ObjC"
+      - "XCode"
+      - "AppCode"
+      - "Cocoapods"
+    Android: 
+      - "Android Studio"
+      - "Google Play"
+    GameDev: 
+      - "Unity"
+      - "Cocoa2d"
+  Scripting: 
     lua: 
       - "lua-jit"
-      - "openresty"
-    python: []
-    ruby: []
-
+      - "open-resty"
+    python:
+      - "something"
+    ruby: 
+      - "something"
+  Infrastructure and Cloud:
+    AWS: 
+      - "ec2"
+      - "DynamoDB"
+      - "SQS"
+      - "lambda"
+      - "S3"
+    Google Cloud
+      - "BigQuery"
+      - "Computer Engine"
+      - "Cloud Storage"
+      - "Data Store"
 ```
 
 
