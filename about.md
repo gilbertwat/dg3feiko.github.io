@@ -24,7 +24,7 @@ title: About Me
 * Financial computation
 
 ## Contact
-* [Email](dg3feiko@gmail.com)
+* [Email](mailto://dg3feiko@gmail.com)
 * [Github](https://github.com/dg3feiko)
 * [Linkedin](https://www.linkedin.com/profile/view?id=134087143)
 
