@@ -50,24 +50,6 @@ title: About Me
     ruby: []
 
 ```
-```js
-{
-  "mobile": {
-    "iOS": ["ObjC", "XCode", "AppCode", "Cocoapods"],
-    "Android": ["Android Studio", "Google Play"],
-    "GameDev": ["Unity", "Cocoa2d"]
-  },
-  "backend": {
-    "JVM": ["Java", "Vert.x", "Kotlin", "Intellij", "Gradle"],
-    ".net": ["C#", "Mono", "Visual Studio", "Mono Studio", "NuGet"]
-  },
-  "scripting": {
-    "lua": ["lua-jit", "openresty"],
-    "python": [],
-    "ruby": []
-  }
-}
-```
 
 
 
