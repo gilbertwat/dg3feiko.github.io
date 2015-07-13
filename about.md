@@ -14,6 +14,26 @@ title: About Me
 
 * Hong Kong
 
+## Skills and Stacks
+
+```yaml
+
+invoice: 34843
+date   : 2001-01-23
+bill-to: &id001
+    given  : Chris
+    family : Dumars
+    address:
+        lines: |
+            458 Walkman Dr.
+            Suite #292
+        city    : Royal Oak
+        state   : MI
+        postal  : 48046
+ship-to: *id00
+```
+
+
 ## Working Experience
 
 * **2014 - Now** Senior Software Enginner [@Aftership](https://www.aftership.com)
@@ -32,9 +52,14 @@ title: About Me
 * Master of Computer Science [@HKU](http://www.cs.hku.hk/)
 * Bachelor of Network Engineering [@SYSU](http://www.sysu.edu.cn/2012/en/index.htm)
 
+## Languages
+
+* English √
+* Cantonese √
+* Mandarin √
 
 
-## Contact
+## Contact Me
 * [Email](mailto:dg3feiko@gmail.com)
 * [Github](https://github.com/dg3feiko)
 * [Linkedin](https://www.linkedin.com/profile/view?id=134087143)
