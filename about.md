@@ -16,18 +16,15 @@ title: About Me
 * **2014** Senior Software Enginner [@M800](https://www.m800.com)
 * **2011 - 2014** Senior Software Enginner [@Outblaze](http://www.outblaze.com)
 
+## Research Works
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+* P2P network optimization for multiple network interfaces
+* Network security
+* Robotic computer vision
+* Financial computation
 
-## Setup
+## Contact
+* [Email](dg3feiko@gmail.com)
+* [Github](https://github.com/dg3feiko)
+* [Linkedin](https://www.linkedin.com/profile/view?id=134087143)
 
-Some fun facts about the setup of this project include:
-
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
