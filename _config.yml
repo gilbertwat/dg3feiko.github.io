@@ -7,9 +7,9 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Feiko Lai
+title:            High Programmablility
 tagline:          'Hong Kong'
-description:      'Software Engineer Focusing on Both Application and Organization Scalability'
+description:      'Software Engineering Focusing on Both Application and Organization Scalability'
 url:              http://dg3feiko.github.io/
 baseurl:          /
 
