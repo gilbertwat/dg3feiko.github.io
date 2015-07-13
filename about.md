@@ -16,6 +16,15 @@ title: About Me
 
 ## Skills and Stacks
 
+```js
+{
+    "mobile":{
+        "ios":[ "ObjC", "XCode", "AppCode"]
+    }
+    
+}
+```
+
 ```yaml
 
 mobile: 
