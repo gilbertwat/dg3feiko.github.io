@@ -3,7 +3,7 @@ layout: page
 title: About Me
 ---
 
-![Profile Image]({{ site.baseurl }}/public/30883b7.jpg "Profile Image")
+![Profile Image](/public/30883b7.jpg "Profile Image")
 
 
 
