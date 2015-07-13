@@ -5,8 +5,8 @@ title: About Me
 
 ## Working Experience
 
-* Senior Software Enginner @ [Aftership](aftership.com)
-* Senior Software Enginner @ [Outblaze](www.outblaze.com)
+* **2014 - now** Senior Software Enginner @ [Aftership](aftership.com)
+* **2011 - 2014** Senior Software Enginner @ [Outblaze](www.outblaze.com)
 
 
 Learn more and contribute on [GitHub](https://github.com/poole).
