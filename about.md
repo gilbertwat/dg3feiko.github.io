@@ -62,7 +62,7 @@ title: About Me
       - "SQS"
       - "lambda"
       - "S3"
-    Google Cloud
+    Google Cloud:
       - "BigQuery"
       - "Computer Engine"
       - "Cloud Storage"
