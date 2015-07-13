@@ -13,7 +13,6 @@ title: About Me
 ## Location
 
 * Hong Kong
-* China
 
 ## Working Experience
 
@@ -27,6 +26,13 @@ title: About Me
 * Network security
 * Robotic computer vision
 * Financial computation
+
+## Education
+
+* Master of Computer Science [@HKU](http://www.cs.hku.hk/)
+* Bachelor of Network Engineering [@SYSU](http://www.sysu.edu.cn/2012/en/index.htm)
+
+
 
 ## Contact
 * [Email](mailto:dg3feiko@gmail.com)
