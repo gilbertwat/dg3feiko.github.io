@@ -15,7 +15,41 @@ title: About Me
 * Hong Kong (GMT+08:00)
 
 ## Skills and Stacks
+```yaml
+---
+  mobile: 
+    iOS: 
+      - "ObjC"
+      - "XCode"
+      - "AppCode"
+      - "Cocoapods"
+    Android: 
+      - "Android Studio"
+      - "Google Play"
+    GameDev: 
+      - "Unity"
+      - "Cocoa2d"
+  backend: 
+    JVM: 
+      - "Java"
+      - "Vert.x"
+      - "Kotlin"
+      - "Intellij"
+      - "Gradle"
+    .net: 
+      - "C#"
+      - "Mono"
+      - "Visual Studio"
+      - "Mono Studio"
+      - "NuGet"
+  scripting: 
+    lua: 
+      - "lua-jit"
+      - "openresty"
+    python: []
+    ruby: []
 
+```
 ```js
 {
   "mobile": {
