@@ -5,6 +5,11 @@ title: About Me
 
 ![Profile Image](/public/30883b7.jpg "Profile Image")
 
+------
+
+###TL;DR:
+> I am an experienced software engineer dedicated for building scalable applications and agile teams.
+
 ## Location
 
 * Hong Kong
@@ -24,7 +29,7 @@ title: About Me
 * Financial computation
 
 ## Contact
-* [Email](mailto://dg3feiko@gmail.com)
+* [Email](mailto:dg3feiko@gmail.com)
 * [Github](https://github.com/dg3feiko)
 * [Linkedin](https://www.linkedin.com/profile/view?id=134087143)
 
