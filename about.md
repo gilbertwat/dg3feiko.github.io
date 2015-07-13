@@ -12,25 +12,29 @@ title: About Me
 
 ## Location
 
-* Hong Kong
+* Hong Kong (GMT+08:00)
 
 ## Skills and Stacks
 
 ```yaml
 
-invoice: 34843
-date   : 2001-01-23
-bill-to: &id001
-    given  : Chris
-    family : Dumars
-    address:
-        lines: |
-            458 Walkman Dr.
-            Suite #292
-        city    : Royal Oak
-        state   : MI
-        postal  : 48046
-ship-to: *id00
+mobile: 
+    - iOS - ObjC - Xcode - AppCode
+    - Android - Java - Android Studio - Gradle - Google Play
+    
+job: Developer
+skill: Elite
+employed: True
+foods:
+    - Apple
+    - Orange
+    - Strawberry
+    - Mango
+languages:
+    ruby: Elite
+    python: Elite
+    dotnet: Lame
+
 ```
 
 
