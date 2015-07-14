@@ -28,8 +28,7 @@ title: About Me
       - "Mono Studio"
       - "NuGet"
     node.js:
-      - "javascript"
-      - "ES6"
+      - "JavaScript ES6"
       - "express.js"
       - "mocha"
   Mobile: 
