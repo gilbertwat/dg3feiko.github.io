@@ -3,9 +3,6 @@ layout: page
 title: About Me
 ---
 
-![Profile Image](/public/30883b7.jpg "Profile Image")
-
-------
 
 ##TL;DR:
 > I am an experienced software engineer dedicated for building scalable applications and agile teams.
