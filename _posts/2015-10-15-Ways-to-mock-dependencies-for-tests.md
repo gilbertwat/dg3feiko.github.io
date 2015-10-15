@@ -127,6 +127,7 @@ describe("DataStore", function(){
 ```
 
 Manual mocking:
+
 * fast, simple, fully controlled
 * only good for very simple behavious and verification
 * need many facilities to do accurate assertion, e.g. if we cares about how many times the set() is called with same args, we need to have a counter and non-trivial counting logic.
@@ -154,6 +155,7 @@ describe("DataStore", function(){
 ```
 
 Fakes:
+
 * Handy to use
 * no real in
 * usually simulate a large part the behavious
