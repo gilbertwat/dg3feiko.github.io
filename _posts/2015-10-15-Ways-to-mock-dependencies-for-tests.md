@@ -221,6 +221,7 @@ describe("DataStore", function(){
 ```
 
 Or in a more functional test way:
+
 ```js
 describe("DataStore", function(){
 	it("should continue to get result from db even cache fails", function(){
@@ -434,6 +435,7 @@ http://www.mocky.io/ gives you fixed response with static url.
 ##### Nock
 
 Nock intercepts runtime just like Mockery, but dedicated for http calls.
+
 ```js
 describe("ServiceClient", function(){
 	it("should retry 5 times if server returns retryable flag", function(){		
