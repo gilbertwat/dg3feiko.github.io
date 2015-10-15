@@ -105,7 +105,8 @@ So using real infrasturcture to test:
 
 Manual Mocking
 =============
-As javascript is very flexible and get() set() in redis is easy to implement, so it is not hard to build a mock from scratch. Let's have a simple test case first, by which we want to verify that `cache is set`; 
+As javascript is very flexible and get() set() in redis is easy to implement, so it is not hard to build a mock from scratch. Let's have a simple test case first, by which we want to verify that `cache is set`.
+
 ```js
 
 class MockRedis{
