@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ways to mock dependencies for tests
+category: testing
 ---
 
 Before Read
