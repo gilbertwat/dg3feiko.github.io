@@ -21,14 +21,7 @@ new Vue({
     methods: {
         start: function (params) {
             let module = { exports: {} };
-            try {
-                module.exports = {
-                    apiToken: "254094951:AAEc87cJdHXnjGlv5sWuncB7BXag19s4orM",                    
-                    onMessage: function (text, update) {
-                        return Promise.resolve("you said: " + text);
-                    }
-                }
-
+            try {            
                 //compile handler
                 eval(editor.getValue());
             } catch (e) {
