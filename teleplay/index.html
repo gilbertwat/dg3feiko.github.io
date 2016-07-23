@@ -37,12 +37,16 @@
                     <div class="mdl-cell mdl-cell--6-col">
 
                         <div id="editor">
-                            module.exports = { apiToken: "254094951:AAEc87cJdHXnjGlv5sWuncB7BXag19s4orM", concurrency: 2, onMessage: function (params)
-                            { } }
-                        </div>                        
+module.exports = {
+    apiToken: "YOUR API TOKEN",                    
+    onMessage: function (text, update) {
+        return Promise.resolve("you said: " + text);
+    }
+}                               
+                        </div>
                         <br/>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" v-bind:disabled="state==='start'">Start</button>
-                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" v-bind:disabled="state==='stop'">Stop</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" v-bind:disabled="!(state==='stopped')" v-on:click="start">Start</button>
+                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" v-bind:disabled="!(state==='started')" v-on:click="stop">Stop</button>
                     </div>
                     <div class="mdl-cell mdl-cell--6-col">
 

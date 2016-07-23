@@ -16,53 +16,57 @@ editor.getSession().setUseWrapMode(true);
 new Vue({
     el: '#app',
     data: {
-        state: "stop"
+        state: "stopped"
     },
     methods: {
         start: function (params) {
             let module = { exports: {} };
             try {
                 module.exports = {
-                    apiToken: "254094951:AAEc87cJdHXnjGlv5sWuncB7BXag19s4orM",
-                    concurrency: 2,
+                    apiToken: "254094951:AAEc87cJdHXnjGlv5sWuncB7BXag19s4orM",                    
                     onMessage: function (text, update) {
                         return Promise.resolve("you said: " + text);
                     }
                 }
 
                 //compile handler
-                // eval(editor.getValue());
+                eval(editor.getValue());
             } catch (e) {
                 logE(e);
-                return; //TODO     
+                return;
             }
-            
-            run(module.exports);
-            
-            this.state = "start";
+            this.state = "started";
+
+            run(module.exports, this);
+
+            logD("bot started.");
         },
         stop: function (params) {
-            this.state = "stop";
+            this.state = "stopping";
         }
     }
 })
 
-let run = Promise.coroutine(function* (handler) {
+let run = Promise.coroutine(function* (handler, stateHolder) {
 
     let execute = Promise.coroutine(function* (result) {
-        let reply = yield handler.onMessage(result["message"]["text"], result);
-        yield superagent
-            .get(`https://api.telegram.org/bot${handler.apiToken}/sendMessage`)
-            .query({
-                chat_id: result["message"]["chat"]["id"],
-                text: reply
-            })
-        logD("handled a message: " + result)
+        try {
+            let reply = yield handler.onMessage(result["message"]["text"], result);
+            yield superagent
+                .get(`https://api.telegram.org/bot${handler.apiToken}/sendMessage`)
+                .query({
+                    chat_id: result["message"]["chat"]["id"],
+                    text: reply
+                })
+            logD(`handled a message: ${result["message"]["text"]} with reply: ${reply}`)
+        } catch (e) {
+            logE(e);
+        }
     });
 
     let offset = localStorage.getItem(`checkpoint:${handler.apiToken}`) || -1;
 
-    while (true) {
+    while (stateHolder.state === "started") {
         try {
             logD(`fetch updates, offset = ${offset}`);
             let res = yield superagent
@@ -70,23 +74,33 @@ let run = Promise.coroutine(function* (handler) {
                 .query({
                     offset: offset,
                     limit: 10,
-                    timeout: 10
+                    timeout: 5
                 })
             let body = res.body;
             if (body.ok) {
                 let results = body.result.filter((r) => { return r.message && r.message.text; });
-                Promise.map(results, execute, { concurrency: handler.concurrency })
-                offset = body.result[body.result.length - 1]['update_id'] + 1
-                localStorage.setItem(`checkpoint:${handler.apiToken}`, offset);
+                Promise.map(results, execute, { concurrency: handler.concurrency || 5 })
+                if (body.result.length > 0) {
+                    offset = body.result[body.result.length - 1]['update_id'] + 1
+                    localStorage.setItem(`checkpoint:${handler.apiToken}`, offset);
+                }
+            } else {
+                logE("result is not okay, will wait  for a while and retry again");
             }
         } catch (e) {
-            //TODO
+            logE(e);
         } finally {
-            yield Promise.delay(5000);//TODO
+            if (stateHolder.state === "started") {
+                continue;
+            } else {
+                break;
+            }
         }
-
     }
+
+    stateHolder.state = "stopped";
+    logD("bot stopped");
+
 });
 
-// start();
 
