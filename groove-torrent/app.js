@@ -9,13 +9,14 @@ firebase.initializeApp({
     storageBucket: "groovetorrent-a937a.appspot.com",
 });
 var songsRef = firebase.database().ref("rooms/test/songs");
-
+var player;
 
 var vue = new Vue({
     el: '#app',
     data: {
         songs: [],
-        currentSong: null
+        currentSong: null,
+        isPlaying: false
     },
     methods: {
         onFileSelect: function (file) {
@@ -29,7 +30,9 @@ var vue = new Vue({
                     download: "0",
                     upload: "0",
                     percentage: "0",
-                    peers: "0"
+                    peers: "0",
+                    duration: "0",
+                    currentTime: "0"
                 }
                 self.songs.push(song);
                 songsRef.push({
@@ -40,12 +43,17 @@ var vue = new Vue({
         },
         play: function (song) {
             var self = this;
-            if (this.currentSong && this.currentSong.url) {
-                URL.revokeObjectURL(this.currentSong.url);
+            if (song.state !== "seeding") {
+                return console.error("The song is imcomplete, can not play.")
             }
-            song.torrent.files[0].getBlobURL(function (err, url) {
-                song.url = url;
+            song.torrent.files[0].getBuffer(function (err, data) {
+                if (player) {
+                    player.stop();
+                }
+                player = AV.Player.fromBuffer(data);
+                player.play();
                 self.currentSong = song;
+                self.isPlaying = true;
             })
         },
         sync: function (newMeta) {
@@ -62,7 +70,9 @@ var vue = new Vue({
                 download: "0",
                 upload: "0",
                 percentage: "0",
-                peers: "0"
+                peers: "0",
+                duration: "0",
+                currentTime: "0"
             }
             self.songs.push(song);
             client.add(meta.link, function (torrent) {
@@ -86,15 +96,35 @@ var vue = new Vue({
                     song.peers = song.torrent.numPeers;
                 }
             });
+
+
+
         }, 2000);
 
         songsRef.on('child_added', function (data) {
             self.sync(data.val());
         });
 
+        setInterval(function () {
+            if (player && self.currentSong) {
+                self.currentSong.currentTime = millisecondsToTime(player.currentTime);
+                self.currentSong.duration = millisecondsToTime(player.duration);
+                self.isPlaying = player.playing;
+            }
+        }, 1000);
+
     }
 })
 
+function millisecondsToTime(milli) {
+    var milliseconds = milli % 1000;
+    var seconds = Math.floor((milli / 1000) % 60);
+    var minutes = Math.floor((milli / (60 * 1000)) % 60);
+    seconds = seconds > 9 ? seconds : "0" + seconds;
+    minutes = minutes > 9 ? minutes : "0" + minutes;
+
+    return minutes + ":" + seconds;
+}
 
 
 function prettyBytes(num) {
