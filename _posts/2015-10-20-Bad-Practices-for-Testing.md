@@ -240,9 +240,9 @@ function log_verbose(msg){
 }
 ```
 
-## Messy Inherience
+## Messy Inheritance
 
-Inherience is usually for two purposes: code reuse and flow control. But in both case, it is hard for writing tests if no super careful handle is taken.
+Inheritance is usually for two purposes: code reuse and flow control. But in both case, it is hard for writing tests if no super careful handle is taken.
 
 ```js
 class CDDrive{
@@ -341,9 +341,9 @@ describe("FacebookAuthenticator", function(){
 ```
 
 #### Why it is bad
-* Inherience blurs the relation and responsibilities of different class
-* Inherience usually has some shared state communication
-* Inherience usually introduces some noise to set up and get it through.
+* Inheritance blurs the relation and responsibilities of different class
+* Inheritance usually has some shared state communication
+* Inheritance usually introduces some noise to set up and get it through.
 
 #### How to fix it
 
